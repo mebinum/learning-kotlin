@@ -1,0 +1,52 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "java (buildArtifact)",
+			"mainClass": "hellokotlin.App",
+			"targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+			"elements": [
+				"${compileOutput}",
+				"${dependencies}"
+			],
+			"problemMatcher": [],
+			"label": "java (buildArtifact): learning-kotlin",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+            "label": "build",
+            "type": "shell",
+            "command": "${workspaceFolder}/HelloKotlin/gradlew build -x test",
+			"options": {
+        		"cwd": "${workspaceFolder}/HelloKotlin/"
+   		 	},
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "${workspaceFolder}/HelloKotlin/gradlew run",
+			"options": {
+        		"cwd": "${workspaceFolder}/HelloKotlin/"
+   		 	},
+            "problemMatcher": []
+        },
+		{
+            "label": "test",
+            "type": "shell",
+            "command": "${workspaceFolder}/HelloKotlin/gradlew test",
+			"options": {
+        		"cwd": "${workspaceFolder}/HelloKotlin/"
+   		 	},
+            "problemMatcher": []
+		}
+	],
+	
+}
